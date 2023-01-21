@@ -1,4 +1,21 @@
-<head>
-<meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="name-of-your-css-file.css">
-</head>
+.row{
+position:relative;
+margin-left:10%;
+margin-right:10%;
+}
+
+.white{
+border: 1px solid black;
+width: 10%;
+height: 60px;
+background-color:white;
+float:left;
+}
+
+.black{
+border: 1px solid black;
+width: 10%;
+height: 60px;
+background-color:#787878;
+float:left;
+}
