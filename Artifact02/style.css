@@ -1,7 +1,7 @@
 <style type="text/css">
 
  body {
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/c/c3/NGC_4414_%28NASA-med%29.jpg");
+  background: url("https://upload.wikimedia.org/wikipedia/commons/c/c3/NGC_4414_%28NASA-med%29.jpg");
 }
 
  #title {
@@ -62,8 +62,12 @@
 
  #footer {
  border:solid 1px;
- padding: 10px;
+ position:fixed;
+ top:0px;
+ left:0px;
+ padding:10px;
  margin:10px;
+ width:100%;
  background-color:#4F9B0F;
  text-align:center; 
  }
