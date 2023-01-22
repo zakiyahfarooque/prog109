@@ -1,8 +1,9 @@
 <style type="text/css">
 
  body {
- background-image:url("http://3.bp.blogspot.com/-aNRb0w9Uu2E/Uk0w1v9lXjI/AAAAAAAAHrM/RipxfZqlQQ4/s1600/Texture-Backgrounds-Wallpaper-HD.jpg");
- }
+  
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/c/c3/NGC_4414_%28NASA-med%29.jpg"); 
+}
  #title {
  position:fixed;
  top:0px;
@@ -63,6 +64,7 @@
  border:solid 1px;
  padding: 10px;
  margin:10px;
+ background-color:#4F9B0F;
  }
 
 </style>
