@@ -8,3 +8,15 @@ body {
 #footer {
   background: red;
 }
+#feature {
+  background: yellow;
+}
+.column1 {
+  background: orange;
+}
+.column2 {
+  background: purple;
+}
+.column3 {
+  background: blue;
+}
