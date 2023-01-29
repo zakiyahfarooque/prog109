@@ -3,7 +3,9 @@ body {
   background-image:url("https://upload.wikimedia.org/wikipedia/commons/c/c3/NGC_4414_%28NASA-med%29.jpg");
 }
 #header {
-  font-family: 'JustLettersMedium';
+  font-family: 'OpenDyslexic3Regular';
+  font-weight: normal;
+  font-style: normal;
 } 
 #nav {
   background: pink;
