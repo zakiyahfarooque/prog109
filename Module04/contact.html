@@ -37,7 +37,13 @@ name="myContact">
             <input type = "text" name = "comments" size = "30" maxlength = "200">
           </label>
           <br />
-		<input type="submit" onclick="window.location.href='https://zakiyahfarooque.github.io/prog109/Module04/thankyou.html';" value="Submit" />
+		<button id="myButton" class="float-left submit-button" >Submit</button>
+<script type="text/javascript">
+    document.getElementById("myButton").onclick = function () {
+        location.href = "https://zakiyahfarooque.github.io/prog109/Module04/thankyou.html";
+    };
+</script>
+
         </fieldset>
     </form>
 	  
