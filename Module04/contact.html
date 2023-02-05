@@ -17,7 +17,7 @@ name="myContact">
   </head>
   <body>
 	<h1>Contact Me!</h1>
-    	<form action= "https://www.example.com/review.php" method="get">
+    	<form method= "POST" action="./thankyou.html">
         <fieldset>
           <legend>
             Your details:
@@ -37,12 +37,9 @@ name="myContact">
             <input type = "text" name = "comments" size = "30" maxlength = "200">
           </label>
           <br />
-		<button id="myButton" class="float-left submit-button" >Submit</button>
-<script type="text/javascript">
-    document.getElementById("myButton").onclick = function () {
-        location.href = "https://zakiyahfarooque.github.io/prog109/Module04/thankyou.html";
-    };
-</script>
+		<input type = "submit" value = "Submit" />
+		
+
 
         </fieldset>
     </form>
