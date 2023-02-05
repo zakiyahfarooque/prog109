@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- 	
+A page with links to all the module assignments done in class
+
+Name of the assignment (i.e, Module 1:  Recipes)
+Links open in new tab -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+    <title> Module Assignments </title>
+  </head>
+  <body>
+     
+	<h1>Welcome to the module Assignments Page!</h1>
+	  <h2>Module Assignments: </h2>
+    
+  </body> 
+ </html>
