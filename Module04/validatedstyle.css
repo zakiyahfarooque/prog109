@@ -1,8 +1,6 @@
 
 .parent {
   border: 1px solid black;
-  width: 50%;
-  overflow: auto;
   margin: 1rem;
   padding: 2rem 2rem;
   text-align: center;
@@ -13,7 +11,9 @@
   background-color: #fcf4c2;
   border: 1px solid;
   width: 50%;
+  height:50%;
   background-image: url('https://user-images.githubusercontent.com/122185308/218283534-d01c0999-1712-46bd-8bf8-3400cca93445.JPG');
+  background-repeat: no-repeat;
   font-size: 18.72px;
   padding: 1rem 1rem;
   vertical-align: middle;
