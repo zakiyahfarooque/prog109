@@ -1,6 +1,7 @@
 
 .parent {
   border: 1px solid black;
+  width: 100%;
   overflow: auto;
   margin: 1rem;
   padding: 2rem 2rem;
