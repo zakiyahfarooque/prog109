@@ -7,7 +7,10 @@
 }
 .html {
   display: inline-block;
+  background-color: #fcf4c2;
   border: 1px solid red;
+  height: auto;
+  width: auto;
   background-image: url('https://user-images.githubusercontent.com/122185308/218283534-d01c0999-1712-46bd-8bf8-3400cca93445.JPG');
   font-size: 18.72px;
   padding: 1rem 1rem;
