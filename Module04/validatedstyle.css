@@ -8,6 +8,7 @@
 .html {
   display: inline-block;
   background-image: url('https://user-images.githubusercontent.com/122185308/218283534-d01c0999-1712-46bd-8bf8-3400cca93445.JPG');
+  background-size: contain;
   color: #fcf4c2;
   background-size: 150px;
   width: 300px;
