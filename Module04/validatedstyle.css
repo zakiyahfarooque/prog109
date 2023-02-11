@@ -8,6 +8,7 @@
 }
 .html {
   display: inline-block;
+  font-size: 20px;
   background-image: url('https://user-images.githubusercontent.com/122185308/218283534-d01c0999-1712-46bd-8bf8-3400cca93445.JPG');
   background-repeat: no-repeat;
   background-color: #fcf4c2;
@@ -22,6 +23,7 @@
 
 .css {
   display: inline-block;
+  font-size: 20px;
   background-image: url('https://user-images.githubusercontent.com/122185308/218285319-65e6bf28-7c14-4925-b784-0fe4c5bccaf6.JPG');
   background-repeat: no-repeat;
   background-color: #f4c2fc;
