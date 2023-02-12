@@ -35,9 +35,10 @@ document.getElementById("upRight").innerHTML = rLine;
 }
 function upLeft(pHeight, pColorEven, pColorOdd, pSymbol){
   var rLine="";
-  for (i=0;i<pHeight;i++){
-  rLine +="<p>";
-    
+  for (i=1;i<pHeight-1;i++){
+    for(j=0; j<i; j++){
+      rLine +="<p>";
+    }
     for (j=0;j<=i;j++){
    if (j%2)
 //even
