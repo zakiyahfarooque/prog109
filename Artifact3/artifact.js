@@ -51,7 +51,8 @@ rLine +="</p>";
 // console.log(rLine);
 
 }
-    
+document.getElementById("upLeft").innerHTML = rLine;
+}
     
     
     
