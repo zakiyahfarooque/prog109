@@ -34,13 +34,14 @@ rLine +="</p>";
 document.getElementById("upRight").innerHTML = rLine;
 }
 function upLeft(pHeight, pColorEven, pColorOdd, pSymbol){
-  var rLine="";
-  for (i=1;i<pHeight-1;i++){
-    for(j=0; j<i; j++){
-      rLine +="<p>";
-    }
-    for (j=0;j<=i;j++){
-   if (j%2)
+var rLine ="";
+for (i=0;i<pHeight;i++){
+rLine +="<p>";
+//Create each line on the Rhombus
+for(j=0;j<=2*i-1;j++){
+
+//Is the position even or odd so we change the color
+if (j%2)
 //even
 rLine +="<span style='color:" + pColorEven + ";'>" + pSymbol +"</span>";
 else
