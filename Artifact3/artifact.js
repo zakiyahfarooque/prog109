@@ -38,7 +38,7 @@ function upLeft(pHeight, pColorEven, pColorOdd, pSymbol){
 var rLine ="";
 for (i=0;i<pHeight;i++){
 //Create each line on the Rhombus
- for(j=0;j<=pHeight-i;j++){
+ for(j=0;j<=i;j++){
   rLine +="<p>";
  for (k=0; k<i; k++){ 
 
