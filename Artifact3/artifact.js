@@ -82,3 +82,29 @@ rLine +="</p>";
 
 document.getElementById("downRight").innerHTML = rLine;
 }
+
+function downLeft(pHeight, pColorEven, pColorOdd, pSymbol){
+var rLine ="";
+for (i=0;i<pHeight;i++){
+    for(j=1;j<=i;j++){
+       rLine +="<p>";
+    }
+//Create each line on the Rhombus
+    for(j=i;j<=i;j++){
+
+//Is the position even or odd so we change the color
+if (j%2)
+//even
+rLine +="<span style='color:" + pColorEven + ";'>" + pSymbol +"</span>";
+else
+//odd
+rLine +="<span style='color:" + pColorOdd + ";'>" + pSymbol +"</span>";
+
+}
+rLine +="</p>";
+// console.log(rLine);
+
+}
+
+document.getElementById("downLeft").innerHTML = rLine;
+}
