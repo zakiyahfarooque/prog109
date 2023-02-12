@@ -38,7 +38,7 @@ function upLeft(pHeight, pColorEven, pColorOdd, pSymbol){
   for (i=0;i<pHeight;i++){
   rLine +="<p>";
     
-    for (j=0;j<i;j++){
+    for (j=0;j<=i;j++){
    if (j%2)
 //even
 rLine +="<span style='color:" + pColorEven + ";'>" + pSymbol +"</span>";
