@@ -36,7 +36,7 @@ document.getElementById("upRight").innerHTML = rLine;
 }
 function upLeft(pHeight, pColorEven, pColorOdd, pSymbol){
 var rLine ="";
-for (i=0;i<pHeight;i++){
+for (let i=1;i<=pHeight;i++){
 rLine +="<p>";
 //Create each line on the Rhombus
 for(j=pHeight;j>=i ;j++){
