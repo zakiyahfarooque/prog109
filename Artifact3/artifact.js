@@ -4,21 +4,28 @@
 // var symbol ="*";
 
 function createRhombus(pHeight, pColorEven, pColorOdd, pSymbol) {
-upRight(pHeight, pColorEven, pColorOdd, pSymbol);
-downRight(pHeight, pColorEven, pColorOdd, pSymbol);
-upLeft(pHeight, pColorEven, pColorOdd, pSymbol);
+upSide(pHeight, pColorEven, pColorOdd, pSymbol);
+downSide(pHeight, pColorEven, pColorOdd, pSymbol);
+
 
 }
 
-function upRight(pHeight, pColorEven, pColorOdd, pSymbol){
-var rLine ="";
-for (i=0;i<pHeight;i++){
-rLine +="<p>";
+function upSide(pHeight, pColorEven, pColorOdd, pSymbol) {
+
+ for (let i = 1; i <= pHeight; i++) {
+  var rLine =" ";
+  
+  
+for(let j=1; j<=pHeight - i; j++) {  
+ rLine +="<p>";
+}
+ 
+for (let k=1; k<=2*i - 1; k++) {
 //Create each line on the Rhombus
-for(j=0;j<=pHeight-i;j++){
+
 
 //Is the position even or odd so we change the color
-if (j%2)
+if (k%2)
 //even
 rLine +="<span style='color:" + pColorEven + ";'>" + pSymbol +"</span>";
 else
@@ -31,66 +38,21 @@ rLine +="</p>";
 
 }
 
-document.getElementById("upRight").innerHTML = rLine;
+document.getElementById("upSide").innerHTML = rLine;
 }
 
-function upLeft(pHeight, pColorEven, pColorOdd, pSymbol){
-var rLine ="";
-for (i=0;i<pHeight;i++){
+
+function downSide(pHeight, pColorEven, pColorOdd, pSymbol){
+
+for (let i= pHeight - 1;i >= 1;i--){
+var rLine +=" ";
 //Create each line on the Rhombus
- for(j=0;j<=i;j++){
-  rLine +="<p>";
- for (k=0; k<i; k++){ 
-
+for(let j=1; j<= pHeight - i;j++){
+ rLine += "<p>";
+}
+for (let k =1; k<=2*i-1; k++){
 //Is the position even or odd so we change the color
-  if (j%2)
-//even
-    rLine +="<span style='color:" + pColorEven + ";'>" + pSymbol +"</span>";
-  else
-//odd
-    rLine +="<span style='color:" + pColorOdd + ";'>" + pSymbol +"</span>";
-
-}
-rLine +="</p>";
-// console.log(rLine);
-
-}
-
-document.getElementById("upLeft").innerHTML = rLine;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function downRight(pHeight, pColorEven, pColorOdd, pSymbol){
-var rLine ="";
-for (i=pHeight;i > 0;i--){
-rLine +="<p>";
-//Create each line on the Rhombus
-for(j=0;j<i;j++){
-
-//Is the position even or odd so we change the color
-if (j%2)
+if (k%2)
 //even
 rLine +="<span style='color:" + pColorEven + ";'>" + pSymbol +"</span>";
 else
@@ -103,7 +65,7 @@ rLine +="</p>";
 
 }
 
-document.getElementById("downRight").innerHTML = rLine;
+document.getElementById("downSide").innerHTML = rLine;
 }
 
  
