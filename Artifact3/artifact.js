@@ -12,15 +12,15 @@ downSide(pHeight, pColorEven, pColorOdd, pSymbol);
 
 function upSide(pHeight, pColorEven, pColorOdd, pSymbol) {
 
- for (let i = 1; i <= pHeight; i++) {
+ for (i = 1; i <= pHeight; i++) {
   var rLine =" ";
   
-  
-for(let j=1; j<=pHeight - i; j++) {  
+ 
+for(j=1; j<=pHeight - i; j++) {  
  rLine +="<p>";
 }
  
-for (let k=1; k<=2*i - 1; k++) {
+for (k=1; k<=2*i - 1; k++) {
 //Create each line on the Rhombus
 
 
@@ -39,18 +39,19 @@ rLine +="</p>";
 }
 
 document.getElementById("upSide").innerHTML = rLine;
+
 }
 
 
 function downSide(pHeight, pColorEven, pColorOdd, pSymbol){
 
-for (let i= pHeight - 1;i >= 1;i--){
-var rLine +=" ";
+for (i= pHeight - 1;i >= 1;i--){
+	var rLine =" ";
 //Create each line on the Rhombus
-for(let j=1; j<= pHeight - i;j++){
+for( j=1; j<= pHeight - i;j++){
  rLine += "<p>";
 }
-for (let k =1; k<=2*i-1; k++){
+for ( k =1; k<=2*i-1; k++){
 //Is the position even or odd so we change the color
 if (k%2)
 //even
@@ -65,7 +66,8 @@ rLine +="</p>";
 
 }
 
-document.getElementById("downSide").innerHTML = rLine;
+  document.getElementById("downSide").innerHTML = rLine;
+
 }
 
- 
+
