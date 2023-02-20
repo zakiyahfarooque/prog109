@@ -3,20 +3,20 @@
 // var colorOdd = "black";
 // var symbol ="*";
 
-function createRhombus(pHeight, pColorEven, pColorOdd, pSymbol) {
-upSide(pHeight, pColorEven, pColorOdd, pSymbol);
-downSide(pHeight, pColorEven, pColorOdd, pSymbol);
+function createRhombus(rHeight, pColorEven, pColorOdd, pSymbol) {
+upSide(rHeight, pColorEven, pColorOdd, pSymbol);
+downSide(rHeight, pColorEven, pColorOdd, pSymbol);
 
 
 }
 
-function upSide(pHeight, pColorEven, pColorOdd, pSymbol) {
+function upSide(rHeight, pColorEven, pColorOdd, pSymbol) {
 
- for (let i = 1; i <= pHeight; i++) {
+ for (let i = 1; i <= rHeight; i++) {
   var rLine =" ";
   
   
-for(let j=1; j<=pHeight - i; j++) {  
+for(let j=1; j<=rHeight - i; j++) {  
  rLine +="<p>";
 }
  
@@ -42,12 +42,12 @@ document.getElementById("upSide").innerHTML = rLine;
 }
 
 
-function downSide(pHeight, pColorEven, pColorOdd, pSymbol){
+function downSide(rHeight, pColorEven, pColorOdd, pSymbol){
 
-for (let i= pHeight - 1;i >= 1;i--){
+for (let i= rHeight - 1;i >= 1;i--){
 var rLine +=" ";
 //Create each line on the Rhombus
-for(let j=1; j<= pHeight - i;j++){
+for(let j=1; j<= rHeight - i;j++){
  rLine += "<p>";
 }
 for (let k =1; k<=2*i-1; k++){
