@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Rhombus Maker</title>
-	<style>
-		input[type=number] {
-			width: 50px;
-		}
-	</style>
-</head>
-<body>
-	<h1>Rhombus Maker</h1>
-	<label for="size">Size:</label>
-	<input type="number" id="size" min="1" max="20" value="5"><br>
-	<label for="color">Color:</label>
-	<input type="color" id="color" value="#000000"><br>
-	<label for="symbol">Symbol:</label>
-	<input type="text" id="symbol" maxlength="1" value="*"><br>
-	<button onclick="makeRhombus()">Make Rhombus</button><br>
-	<div id="rhombus"></div>
-	<script src="artifact.js"></script>
-</body>
+  <head>
+    <title>Rhombus Maker</title>
+    <script src="rhombus.js"></script>
+  </head>
+  <body>
+    <h1>Rhombus Maker</h1>
+    <label for="size">Size:</label>
+    <input type="number" id="size"><br>
+    <label for="symbol">Symbol:</label>
+    <input type="text" id="symbol"><br>
+    <label for="color1">Color 1:</label>
+    <input type="color" id="color1" value="#0000ff"><br>
+    <label for="color2">Color 2:</label>
+    <input type="color" id="color2" value="#ffff00"><br>
+    <button onclick="makeRhombus()">Make Rhombus</button>
+    <br>
+    <div id="rhombus"></div>
+  </body>
 </html>
