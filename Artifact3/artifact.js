@@ -8,16 +8,11 @@ function makeRhombus() {
   let colors = [color1, color2];
   let colorIndex = 0;
 
-  for (let i = 0; i < size; i++) {
-    for (let j = size - i; j > 1; j--) {
+  for (let i = 1; i <= size; i++) {
+    for (let j = 1; j <= size - i; j++) {
       rhombus += "&nbsp;&nbsp;";
     }
-    for (let j = 0; j <= i; j++) {
-      let color = colors[colorIndex % 2];
-      rhombus += "<span style=\"color: " + color + "\">" + symbol + "</span>";
-      colorIndex++;
-    }
-    for (let j = i - 1; j >= 0; j--) {
+    for (let j = 1; j <= 2 * i - 1; j++) {
       let color = colors[colorIndex % 2];
       rhombus += "<span style=\"color: " + color + "\">" + symbol + "</span>";
       colorIndex++;
@@ -25,16 +20,11 @@ function makeRhombus() {
     rhombus += "<br>";
   }
 
-  for (let i = size - 2; i >= 0; i--) {
-    for (let j = size - i; j > 1; j--) {
+  for (let i = size - 1; i >= 1; i--) {
+    for (let j = 1; j <= size - i; j++) {
       rhombus += "&nbsp;&nbsp;";
     }
-    for (let j = 0; j <= i; j++) {
-      let color = colors[colorIndex % 2];
-      rhombus += "<span style=\"color: " + color + "\">" + symbol + "</span>";
-      colorIndex++;
-    }
-    for (let j = i - 1; j >= 0; j--) {
+    for (let j = 1; j <= 2 * i - 1; j++) {
       let color = colors[colorIndex % 2];
       rhombus += "<span style=\"color: " + color + "\">" + symbol + "</span>";
       colorIndex++;
