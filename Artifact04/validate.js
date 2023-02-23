@@ -17,43 +17,52 @@ function validateForm() {
   document.getElementById("passwordError").innerHTML = "";
   document.getElementById("zipcodeError").innerHTML = "";
 
+  // initialize array to store error messages
+  var errorMessages = [];
+
   // validate name
   var nameRegex = /^[a-zA-Z]{1,20}$/;
   if (!nameRegex.test(name)) {
-    document.getElementById("nameError").innerHTML = "Name should only contain alphabetical characters and be between 1 and 20 characters long.";
-    return false;
+    errorMessages.push("Name should only contain alphabetical characters and be between 1 and 20 characters long.");
   }
 
   // validate email
   var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
-    document.getElementById("emailError").innerHTML = "Email is not valid.";
-    return false;
+    errorMessages.push("Email is not valid.");
   }
 
   // validate phone
   var phoneRegex = /^[0-9-]+$/;
   if (!phoneRegex.test(phone)) {
-    document.getElementById("phoneError").innerHTML = "Phone number should only contain numbers or numbers and dashes.";
-    return false;
+    errorMessages.push("Phone number should only contain numbers or numbers and dashes.");
   }
 
   // validate username
   if (username.length < 3) {
-    document.getElementById("usernameError").innerHTML = "Username should be at least 3 characters long.";
-    return false;
+    errorMessages.push("Username should be at least 3 characters long.");
   }
 
   // validate password
   var passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!]).{1,7}$/;
   if (!passwordRegex.test(password)) {
-    document.getElementById("passwordError").innerHTML = "Password should be between 1 and 7 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character (@#$%^&+=!).";
-    return false;
+    errorMessages.push("Password should be between 1 and 7 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character (@#$%^&+=!).");
   }
 
   // validate zipcode
   if (country.toLowerCase() === "usa" && zipcode.length !== 5) {
-    document.getElementById("zipcodeError").innerHTML = "Zipcode should be 5 digits long.";
+    errorMessages.push("Zipcode should be 5 digits long.");
+  }
+
+  // display all error messages if any validations fail
+  if (errorMessages.length > 0) {
+    errorMessages.forEach(function(errorMessage) {
+      var errorElement = document.createElement("div");
+      errorElement.classList.add("error");
+      errorElement.innerHTML = errorMessage;
+      document.getElementById("formErrors").appendChild(errorElement);
+    });
+
     return false;
   }
 
