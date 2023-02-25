@@ -37,4 +37,41 @@ function validateForm() {
     document.getElementById("emailError").classList.add("error");
   }
 
+  //validate phone
+  var phoneRegex = /^[0-9-]+$/;
+  if (!phoneRegex.test(phone)) {
+    errorMessages.push("Phone number should only contain numbers or numbers and dashes.");
+  }
+
+  // validate username
+  if (username.length < 3) {
+    errorMessages.push("Username should be at least 3 characters long.");
+  }
+
+  // validate password
+  var passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!]).{1,7}$/;
+  if (!passwordRegex.test(password)) {
+    errorMessages.push("Password should be between 1 and 7 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character (@#$%^&+=!).");
+  }
+
+  // validate zipcode
+  if (country.toLowerCase() === "usa" && zipcode.length !== 5) {
+    errorMessages.push("Zipcode should be 5 digits long.");
+  }
+
+  // display all error messages if any validations fail
+  if (errorMessages.length > 0) {
+    errorMessages.forEach(function(errorMessage) {
+      var errorElement = document.createElement("div");
+      errorElement.classList.add("error");
+      errorElement.innerHTML = errorMessage;
+      document.getElementById("formErrors").appendChild(errorElement);
+    });
+
+    return false;
+  }
+
+  // return true if all validations pass
+  return true;
+}
   //
