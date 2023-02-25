@@ -6,7 +6,7 @@
 </head>
 <body>
 	<div id="formErrors"></div>
-	 <form id="myForm" onsubmit="return validateForm()">
+	 <form id="myForm" onsubmit="validateForm(event)">
 		<label for="name">Name:</label>
 		<input type="text" id="name" name="name"><br>
 		<div id="nameError"></div>
