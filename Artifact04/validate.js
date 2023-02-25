@@ -1,5 +1,4 @@
 function validateForm() {
-   
   // get form input values
   var name = document.getElementById("name").value.trim();
   var email = document.getElementById("email").value.trim();
@@ -11,6 +10,7 @@ function validateForm() {
   var zipcode = document.getElementById("zipcode").value.trim();
 
   // clear error messages
+  document.getElementById("formErrors").innerHTML = "";
   document.getElementById("nameError").innerHTML = "";
   document.getElementById("emailError").innerHTML = "";
   document.getElementById("phoneError").innerHTML = "";
@@ -37,41 +37,51 @@ function validateForm() {
     document.getElementById("emailError").classList.add("error");
   }
 
-  //validate phone
+  // validate phone
   var phoneRegex = /^[0-9-]+$/;
   if (!phoneRegex.test(phone)) {
     errorMessages.push("Phone number should only contain numbers or numbers and dashes.");
+    document.getElementById("phoneError").innerHTML = "Phone number should only contain numbers or numbers and dashes.";
+    document.getElementById("phoneError").classList.add("error");
   }
 
   // validate username
   if (username.length < 3) {
     errorMessages.push("Username should be at least 3 characters long.");
+    document.getElementById("usernameError").innerHTML = "Username should be at least 3 characters long.";
+    document.getElementById("usernameError").classList.add("error");
   }
 
   // validate password
   var passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!]).{1,7}$/;
   if (!passwordRegex.test(password)) {
     errorMessages.push("Password should be between 1 and 7 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character (@#$%^&+=!).");
+    document.getElementById("passwordError").innerHTML = "Password should be between 1 and 7 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character (@#$%^&+=!).";
+    document.getElementById("passwordError").classList.add("error");
   }
 
   // validate zipcode
   if (country.toLowerCase() === "usa" && zipcode.length !== 5) {
     errorMessages.push("Zipcode should be 5 digits long.");
-  }
-
-  // display all error messages if any validations fail
-  if (errorMessages.length > 0) {
-    errorMessages.forEach(function(errorMessage) {
-      var errorElement = document.createElement("div");
-      errorElement.classList.add("error");
-      errorElement.innerHTML = errorMessage;
-      document.getElementById("formErrors").appendChild(errorElement);
-    });
-
-    return false;
-  }
-
-  // return true if all validations pass
-  return true;
+    document.getElementById("zipcodeError").innerHTML = "Zipcode should be 5 digits long.";
+    document.getElementById("zipcodeError").classList.add("error");
+    } else {
+      document.getElementById("zipcodeError").innerHTML = "";
+      document.getElementById("zipcodeError").classList.remove("error");
+    }
+  
+    // display all error messages if any validations fail
+    if (errorMessages.length > 0) {
+      errorMessages.forEach(function(errorMessage) {
+        var errorElement = document.createElement("div");
+        errorElement.classList.add("error");
+        errorElement.innerHTML = errorMessage;
+        document.getElementById("formErrors").appendChild(errorElement);
+      });
+  
+      return false;
+    }
+  
+    // return true if all validations pass
+    return true;
 }
-  //
