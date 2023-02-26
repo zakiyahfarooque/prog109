@@ -1,6 +1,7 @@
 function validateForm() {
   // get form input values
-  var name = document.getElementById("name").value.trim();
+  var firstName = document.getElementById("firstName").value.trim();
+  var lastName = document.getElementById("lastName").value.trim();
   var email = document.getElementById("email").value.trim();
   var phone = document.getElementById("phone").value.trim();
   var username = document.getElementById("username").value.trim();
@@ -11,24 +12,33 @@ function validateForm() {
 
   // clear error messages
   document.getElementById("formErrors").innerHTML = "";
-  document.getElementById("nameError").innerHTML = "";
+  document.getElementById("firstNameError").innerHTML = "";
+  document.getElementById("lastNameError").innerHTML = "";
   document.getElementById("emailError").innerHTML = "";
   document.getElementById("phoneError").innerHTML = "";
   document.getElementById("usernameError").innerHTML = "";
   document.getElementById("passwordError").innerHTML = "";
   document.getElementById("zipcodeError").innerHTML = "";
-
   // initialize array to store error messages
   var errorMessages = [];
 
-  // validate name
-  var nameRegex = /^[a-zA-Z]{1,20}$/;
-  if (!nameRegex.test(name)) {
-    errorMessages.push("Name should only contain alphabetical characters and be between 1 and 20 characters long.");
-    document.getElementById("nameError").innerHTML = "Name should only contain alphabetical characters and be between 1 and 20 characters long.";
-    document.getElementById("nameError").classList.add("error");
+  // validate fisrt name
+  var firstNameRegex = /^[a-zA-Z]{1,20}$/;
+  if (!firstNameRegex.test(firstName)) {
+  errorMessages.push("First name should only contain alphabetical characters and be between 1 and 20 characters long.");
+  document.getElementById("firstNameError").innerHTML = "First name should only contain alphabetical characters and be between 1 and 20 characters long.";
+  document.getElementById("firstNameError").classList.add("error");
   }
 
+  //validate last name
+  var lastNameRegex = /^[a-zA-Z]{1,50}$/;
+  if (!lastNameRegex.test(lastName)) {
+    errorMessages.push("Last name should only contain alphabetical characters and be between 1 and 50 characters long.");
+    document.getElementById("lastNameError").innerHTML = "Last name should only contain alphabetical characters and be between 1 and 50 characters long.";
+    document.getElementById("lastNameError").classList.add("error");
+  }
+  
+  
   // validate email
   var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
@@ -46,9 +56,9 @@ function validateForm() {
   }
 
   // validate username
-  if (username.length < 3) {
-    errorMessages.push("Username should be at least 3 characters long.");
-    document.getElementById("usernameError").innerHTML = "Username should be at least 3 characters long.";
+  if (username.length > 12) {
+    errorMessages.push("Username should be less than 12 characters long.");
+    document.getElementById("usernameError").innerHTML = "Username should be less than 12 characters long.";
     document.getElementById("usernameError").classList.add("error");
   }
 
