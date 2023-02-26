@@ -54,13 +54,14 @@ function validateForm() {
     document.getElementById("phoneError").innerHTML = "Phone number should only contain numbers or numbers and dashes.";
     document.getElementById("phoneError").classList.add("error");
   }
-
+  
   // validate username
-  if (username.length > 12) {
-    errorMessages.push("Username should be less than 12 characters long.");
-    document.getElementById("usernameError").innerHTML = "Username should be less than 12 characters long.";
-    document.getElementById("usernameError").classList.add("error");
-  }
+  var usernameRegex = /^[a-zA-Z0-9_]{3,12}$/;
+  if (!usernameRegex.test(username)) {
+  errorMessages.push("Username should be between 3 and 12 characters long and may only contain alphanumeric characters and underscores.");
+  document.getElementById("usernameError").innerHTML = "Username should be between 3 and 12 characters long and may only contain alphanumeric characters and underscores.";
+  document.getElementById("usernameError").classList.add("error");
+}
 
   // validate password
   var passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!]).{1,7}$/;
