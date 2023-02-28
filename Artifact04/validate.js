@@ -18,6 +18,8 @@ function validateForm() {
   document.getElementById("phoneError").innerHTML = "";
   document.getElementById("usernameError").innerHTML = "";
   document.getElementById("passwordError").innerHTML = "";
+  document.getElementById("countryError").innerHTML = "";
+  document.getElementById("stateError").innerHTML = "";
   document.getElementById("zipcodeError").innerHTML = "";
   // initialize array to store error messages
   var errorMessages = [];
@@ -71,6 +73,26 @@ function validateForm() {
     document.getElementById("passwordError").classList.add("error");
   }
 
+    // validate country
+  if (country === "") {
+    errorMessages.push("Please select a country.");
+    document.getElementById("countryError").innerHTML = "Please select a country.";
+    document.getElementById("countryError").classList.add("error");
+  } else {
+    document.getElementById("countryError").innerHTML = "";
+    document.getElementById("countryError").classList.remove("error");
+  }
+  
+    // validate state
+  if (state === "") {
+    errorMessages.push("Please select a state.");
+    document.getElementById("stateError").innerHTML = "Please select a state.";
+    document.getElementById("stateError").classList.add("error");
+  } else {
+    document.getElementById("stateError").innerHTML = "";
+    document.getElementById("stateError").classList.remove("error");
+  }
+
   // validate zipcode
   if (country.toLowerCase() === "usa" && zipcode.length !== 5) {
     errorMessages.push("Zipcode should be 5 digits long.");
@@ -93,6 +115,12 @@ function validateForm() {
       return false;
     }
   
-    // return true if all validations pass
-    return true;
+  // show thank you message and redirect to thank you page
+  document.getElementById("thankYouMessage").classList.remove("hidden");
+  setTimeout(function() {
+    window.location.href = "thankyou.html";
+  }, 5000);
+
+  // prevent form from submitting normally
+  return false;
 }
