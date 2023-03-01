@@ -1,4 +1,4 @@
-var items = ['Apple', 'Book', 'Cat', 'Drum', 'Eggplant'];
+var items = ['flower vase', 'photo frame', 'hanging plants', 'plate', 'clock'];
 var found = 0;
 
 function foundItem(item) {
@@ -21,29 +21,29 @@ function replay() {
     location.reload();
 }
 
-var apple = document.getElementById('apple');
+var apple = document.getElementById('flower vase');
 apple.addEventListener('click', function() {
-	foundItem('Apple');
+	foundItem('flower vase');
 }, false);
 
-var book = document.getElementById('book');
+var book = document.getElementById('photo frame');
 book.addEventListener('click', function() {
-	foundItem('Book');
+	foundItem('photo frame');
 }, false);
 
-var cat = document.getElementById('cat');
+var cat = document.getElementById('hanging plants');
 cat.addEventListener('click', function() {
-	foundItem('Cat');
+	foundItem('hanging plants');
 }, false);
 
-var drum = document.getElementById('drum');
+var drum = document.getElementById('plate');
 drum.addEventListener('click', function() {
-	foundItem('Drum');
+	foundItem('plate');
 }, false);
 
-var eggplant = document.getElementById('eggplant');
+var eggplant = document.getElementById('clock');
 eggplant.addEventListener('click', function() {
-	foundItem('Eggplant');
+	foundItem('clock');
 }, false);
 
 var playAgainBtn = document.getElementById('play-again');
