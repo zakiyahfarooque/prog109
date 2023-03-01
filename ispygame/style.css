@@ -1,0 +1,41 @@
+body {
+	background-color: #f2f2f2;
+	font-family: Arial, sans-serif;
+}
+
+#container {
+	margin: 0 auto;
+	width: 80%;
+	text-align: center;
+}
+
+h1 {
+	font-size: 36px;
+	margin-bottom: 10px;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+img {
+	display: block;
+	margin: 0 auto;
+}
+
+p#message {
+	font-size: 24px;
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+area {
+	cursor: pointer;
+}
