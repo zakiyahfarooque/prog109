@@ -45,3 +45,8 @@ var eggplant = document.getElementById('eggplant');
 eggplant.addEventListener('click', function() {
 	foundItem('Eggplant');
 }, false);
+
+var playAgainBtn = document.getElementById('play-again');
+playAgainBtn.addEventListener('click', function() {
+	replay();
+}, false);
