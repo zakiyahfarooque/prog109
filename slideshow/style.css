@@ -1,1 +1,19 @@
+#slideshow-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 
+#slideshow-image {
+	max-width: 100%;
+	margin: 20px 0;
+}
+
+button {
+	margin: 10px;
+}
+
+#slideshow-description {
+	font-size: 18px;
+	text-align: center;
+}
