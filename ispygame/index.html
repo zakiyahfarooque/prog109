@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>I Spy Game</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="container">
+		<h1>I Spy Game</h1>
+		<p>Find the following items in the picture:</p>
+		<ul>
+			<li>Apple</li>
+			<li>Book</li>
+			<li>Cat</li>
+			<li>Drum</li>
+			<li>Eggplant</li>
+		</ul>
+		<img src="https://i.imgur.com/kOwId0S.jpg" usemap="#objects">
+		<map name="objects">
+			<area shape="rect" coords="230,200,330,270" alt="Apple">
+			<area shape="rect" coords="80,150,210,250" alt="Book">
+			<area shape="rect" coords="170,330,260,420" alt="Cat">
+			<area shape="rect" coords="400,280,480,350" alt="Drum">
+			<area shape="rect" coords="380,100,460,180" alt="Eggplant">
+		</map>
+		<p id="message"></p>
+	</div>
+	<script src="game.js"></script>
+</body>
+</html>
