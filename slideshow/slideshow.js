@@ -1,24 +1,24 @@
 // Array of image URLs and descriptions
 const images = [
 	{
-		url: 'images/image1.jpg',
-		description: 'Description 1'
+		url: 'https://upload.wikimedia.org/wikipedia/en/c/cd/Omori_cover.jpg',
+		description: 'Omori'
 	},
 	{
-		url: 'images/image2.jpg',
-		description: 'Description 2'
+		url: 'https://user-images.githubusercontent.com/122185308/222077121-12d52327-3436-474c-bbb4-0f2b5a204e87.jpg',
+		description: 'Stardew Valley'
 	},
 	{
-		url: 'images/image3.jpg',
-		description: 'Description 3'
+		url: 'https://upload.wikimedia.org/wikipedia/en/4/46/Video_Game_Cover_-_The_Last_of_Us.jpg',
+		description: 'The Last of Us'
 	},
 	{
-		url: 'images/image4.jpg',
-		description: 'Description 4'
+		url: 'https://upload.wikimedia.org/wikipedia/en/8/80/Halo_-_Combat_Evolved_%28XBox_version_-_box_art%29.jpg',
+		description: 'Halo'
 	},
 	{
-		url: 'images/image5.jpg',
-		description: 'Description 5'
+		url: 'https://user-images.githubusercontent.com/122185308/222077695-82a07d50-73ea-4aa0-8b45-2309a51aa2f7.png',
+		description: 'Batman Arkham Series'
 	}
 ];
 
