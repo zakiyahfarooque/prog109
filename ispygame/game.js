@@ -17,6 +17,10 @@ function foundItem(item) {
 	}
 }
 
+function replay() {
+    location.reload();
+}
+
 var apple = document.getElementById('apple');
 apple.addEventListener('click', function() {
 	foundItem('Apple');
