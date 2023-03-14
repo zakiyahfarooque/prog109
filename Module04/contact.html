@@ -1,48 +1,69 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<!-- page must have a form that collects the user's name, a subject for the message and an area to enter additional information from the user. Once the form is submitted, a Thank you page should be shown.
+  <head>
+    <!-- page must have a form that collects the user's name, email, a subject for the message and an area to enter additional information from the user. Once the form is submitted, a Thank you page should be shown.
+    NOTE: We are not doing SERVER-SIDE scripting, but just simulating how to send the data to the server. The way this work is by using the attribute action in your <form>:
+    <form action="name-of-your-thankyou-page.html" method="get" name="myContact">
+    ...
+    </form>
+    -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Contact Me</title>
+	  
+    <script type="text/javascript">
+      function validateForm() {
+        // Get form inputs
+        var name = document.forms["myContact"]["name"].value;
+        var email = document.forms["myContact"]["email"].value;
+        var subject = document.forms["myContact"]["subject"].value;
+        var comments = document.forms["myContact"]["comments"].value;
 
-NOTE:  We are not doing SERVER-SIDE scripting, but just simulating how to send the data to the server.  The way this work is by using the attribute action in your <form>:
+        // Check if all fields are filled
+        if (name == "" || email == "" || subject == "" || comments == "") {
+          alert("Please fill in all fields");
+          return false;
+        }
 
-<form action="name-of-your-thankyou-page.html" method="get"
-name="myContact">
+        // Check if email is valid
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          alert("Please enter a valid email address");
+          return false;
+        }
 
-...
-
-</form> -->
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width">
-    <title> Contact Me </title>
+        // If all inputs are valid, return true
+        return true;
+      }
+    </script>
   </head>
   <body>
-	<h1>Contact Me!</h1>
-	<form target="_blank" action="./thankyou.html" method="POST">
-        <fieldset>
-          <legend>
-            Your details:
-          </legend>
-          <label>
-            Name:
-            <input type = "text" name = "name" size = "30" maxlength = "100">
-          </label>
-          <br />
-          <label>
-            Email:
-            <input type = "email" name = "email" size = "30" maxlength = "100">
-          </label>
-          <br />
-          <label>
-            Comments:
-            <input type = "text" name = "comments" size = "30" maxlength = "200">
-          </label>
-          <br />
-		<input type = "submit" value = "Submit" />
-		
-
-
-        </fieldset>
+    <h1>Contact Me!</h1>
+    <form action="./thankyou.html" method="get" name="myContact" onsubmit="return validateForm()">
+      <fieldset>
+        <legend>Your details:</legend>
+        <label>
+          Name:
+          <input type="text" name="name" size="30" maxlength="100">
+        </label>
+        <br>
+        <label>
+          Email:
+          <input type="email" name="email" size="30" maxlength="100">
+        </label>
+        <br>
+        <label>
+          Subject:
+          <input type="text" name="subject" size="30" maxlength="100">
+        </label>
+        <br>
+        <label>
+          Comments:
+          <textarea name="comments" rows="5" cols="30" maxlength="200"></textarea>
+        </label>
+        <br>
+        <input type="submit" value="Submit">
+      </fieldset>
     </form>
-	  
-  </body> 
- </html>
+  </body>
+</html>
