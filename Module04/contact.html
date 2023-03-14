@@ -11,42 +11,80 @@
     <meta name="viewport" content="width=device-width">
     <title>Contact Me</title>
 	  <style>
-			body {
-				background-image: url('https://user-images.githubusercontent.com/122185308/224911166-801c539c-1c67-4169-acd8-7847fdf333b2.jpg');
-				background-size: cover;
-				font-family: Arial, sans-serif;
-				color: black;
-			}
-			.contact-form {
-				background-color: #FCD6D6;
-				padding: 20px;
-				border-radius: 10px;
-			}
-			label {
-				display: block;
-				margin-bottom: 10px;
-			}
-			input[type="submit"] {
-				margin-top: 10px;
-				background-color: #4CAF50;
-				color: white;
-				padding: 10px 20px;
-				border: none;
-				border-radius: 5px;
-				cursor: pointer;
-			}
-		  #nav-container {
-        			background-color: #ffe5e5;
-				margin: 0;
-				padding: 0;
-      					}
-     			#nav ul {
-       				display: flex;
-        			justify-content: space-around;
-        			align-items: center;
-        			list-style: none;
-      				}
-		</style>
+		body {
+			background-image: url('https://user-images.githubusercontent.com/122185308/224787438-9bfe8505-2bab-4d37-9e3e-18c1e8954d18.jpg');
+			background-size: cover;
+			font-family: Arial, sans-serif;
+			color: black;
+		}
+		.section {
+			background-color: #ffe4e1;
+			padding: 20px;
+			margin-bottom: 20px;
+		}
+		.section-title {
+			font-size: 24px;
+			font-weight: bold;
+			margin-top: 0;
+			margin-bottom: 10px;
+		}
+		.assignment-link {
+			font-size: 16px;
+			display: block;
+			margin-bottom: 10px;
+		}
+		#nav-container {
+			background-color: #ffe5e5;
+			margin: 0;
+			padding: 0;
+		}
+		#nav ul {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			list-style: none;
+		}
+		.contact-section {
+			background-color: #ffe4e1;
+			padding: 20px;
+			margin-bottom: 20px;
+		}
+		.contact-title {
+			font-size: 24px;
+			font-weight: bold;
+			margin-top: 0;
+			margin-bottom: 10px;
+			color: #ff1493;
+		}
+		.contact-form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.contact-form input[type="text"],
+		.contact-form input[type="email"],
+		.contact-form textarea {
+			width: 100%;
+			margin-bottom: 10px;
+			padding: 10px;
+			border-radius: 5px;
+			border: none;
+			font-size: 16px;
+		}
+		.contact-form input[type="submit"] {
+			background-color: #ff1493;
+			color: white;
+			font-size: 16px;
+			padding: 10px 20px;
+			border-radius: 5px;
+			border: none;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+		.contact-form input[type="submit"]:hover {
+			background-color: #ff0066;
+		}
+	</style>
     <script type="text/javascript">
       function validateForm() {
         // Get form inputs
