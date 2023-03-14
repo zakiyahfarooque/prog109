@@ -10,7 +10,43 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Contact Me</title>
-	  
+	  <style>
+			body {
+				background-image: url('https://user-images.githubusercontent.com/122185308/224911166-801c539c-1c67-4169-acd8-7847fdf333b2.jpg');
+				background-size: cover;
+				font-family: Arial, sans-serif;
+				color: black;
+			}
+			.contact-form {
+				background-color: #FCD6D6;
+				padding: 20px;
+				border-radius: 10px;
+			}
+			label {
+				display: block;
+				margin-bottom: 10px;
+			}
+			input[type="submit"] {
+				margin-top: 10px;
+				background-color: #4CAF50;
+				color: white;
+				padding: 10px 20px;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+			}
+		  #nav-container {
+        			background-color: #ffe5e5;
+				margin: 0;
+				padding: 0;
+      					}
+     			#nav ul {
+       				display: flex;
+        			justify-content: space-around;
+        			align-items: center;
+        			list-style: none;
+      				}
+		</style>
     <script type="text/javascript">
       function validateForm() {
         // Get form inputs
@@ -38,6 +74,20 @@
     </script>
   </head>
   <body>
+	  <div id="nav-container">
+		<div id="nav">
+			<ul>
+				<li><a href="./home.html">Home</a></li>
+				<li><a href="./About.html">About</a></li>
+				<li><a href="./coursework.html">Coursework</a></li>
+				<li><a href="./artifacts.html">Artifacts</a></li>
+				<li><a href="./assignments.html">Module Assignments</a></li>
+				<li><a href="./creative.html">Creative</a></li>
+				<li><a href="./contact.html">Contact Me</a></li>
+				<li><a href="./validated.html">Validation</a></li>
+			</ul>
+		</div>
+	</div>
     <h1>Contact Me!</h1>
     <form action="./thankyou.html" method="get" name="myContact" onsubmit="return validateForm()">
       <fieldset>
